@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css">
+    <title>Formulario</title>
+</head>
+
+<body>
+    <!-- Como no se si esto lo quieres agregar a la pagina principal , lo hare en un HTML aparte  :) -->
+    <fieldset class="form__fieldset">
+        <legend>Formulario de Venta</legend>
+        <table class="table__Productos">
+            <legend class="table__legend">Nuestros Productos</legend>
+            <thead>
+                <tr class="tr__principal">
+                    <th scope="col">Platos</th>
+                    <th scope="col">Precio</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="tbody__row">
+                    <th scope="row">Cazuela</th>
+                    <td>5000</td>
+                </tr>
+                <tr class="tbody__row">
+                    <th scope="row">Pollo Con Arroz</th>
+                    <td>4500</td>
+                </tr>
+                <tr class="tbody__row">
+                    <th scope="row">Garbanzos</th>
+                    <td>4500</td>
+                </tr>
+                <tr class="tbody__row">
+                    <th scope="row">Tequeños</th>
+                    <td>3000</td>
+                </tr>
+            </tbody>
+        </table>
+
+
+        <form class="form__Venta" method="get">
+            <div class="div__venta">
+                <label for="fecha">Fecha</label>
+                <input type="date" id="fecha">
+            </div>
+            <div class="div__venta">
+                <label for="productos">Productos</label>
+                <select id="productos">
+                    <option value="cazuela">Cazuela</option>
+                    <option value="polloConArroz">Pollo con Arroz</option>
+                    <option value="garbanzos">Garbanzos</option>
+                    <option value="tequenos">Tequeños</option>
+                </select>
+            </div>
+            <div class="div__venta">
+                <label for="cantidad">Cantidad</label>
+                <input id="cantidad" type="number">
+            </div>
+            <input type="submit" value="enviar" class="submit-btn">        
+        <table>
+            <thead>
+                <tr>
+                    <th></th>
+                    <th>Precio</th>
+                    <th>Cantidad</th>
+                    <th>Subtotal</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th>Elemento a pedir</th>
+                    <td>valor</td>
+                    <td>cantidad</td>
+                    <td>subtotal</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <th>Valor Total</th>
+                    <td></td>
+                    <td></td>
+                    <td>Valor total</td>
+                </tr>
+            </tfoot>
+        </table>
+        <div class="div__venta">
+            <label for="metodoDePago">Metodo de pago</label>
+            <button type="button" value="Efectivo">Efectivo</button>
+            <button type="button" value="WebPay">WebPay</button>
+        </div>
+        <button type="button" id="btn__venta" class="btn__venta">Confirmar Venta</button>
+    </form>
+    </fieldset>
+    <script src="./main.js"></script>
+</body>
+
+</html>

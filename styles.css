@@ -1,0 +1,45 @@
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    font-family: cursive;
+}
+
+
+/* Form */
+label {
+    line-height: 1.9rem;
+}
+/* Table in form */
+.table__Productos{
+    margin: 10px auto;
+    width: 80%;
+    border-collapse: collapse;
+}
+
+.table__legend{
+    text-align: center;
+    padding: 10px 0px;
+    border-bottom: 1px solid black;
+}
+
+.tr__principal{
+    background-color: rgba(5, 26, 255, 0.342);
+    border-collapse: collapse;
+}
+
+.tbody__row{
+    border-bottom: 1px solid black;
+}
+
+
+.btn__venta {
+    width: 90%;
+    height: 2rem;
+    margin-top: 1em;
+}
+
+fieldset {
+    padding: 20px 40px;
+}
