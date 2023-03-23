@@ -87,12 +87,15 @@
                 </tr>
             </tfoot>
         </table>
-        <div class="div__venta">
+        <div class="div__venta" id="metodoDePago">
             <label for="metodoDePago">Metodo de pago</label>
-            <button type="button" value="Efectivo">Efectivo</button>
-            <button type="button" value="WebPay">WebPay</button>
+            <br>
+            <div class="BotonesDePago">
+                <button type="button" value="Efectivo"><img src="./assets/billete.png" width="30px"></button>
+                <button type="button" value="WebPay"><img src="./assets/webPay.png" width="30px"></button>
+            </div>
         </div>
-        <button type="button" id="btn__venta" class="btn__venta">Confirmar Venta</button>
+        <button type="button" id="btn__venta" class="btn__venta" onclick="alert()">Confirmar Venta</button>
     </form>
     </fieldset>
     <script src="./main.js"></script>

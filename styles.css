@@ -4,6 +4,13 @@ body {
     justify-content: center;
     min-height: 100vh;
     font-family: cursive;
+    box-sizing: border-box;
+}
+
+/* Fieldset */
+
+.form__fieldset {
+    padding: 20px 40px;
 }
 
 
@@ -11,6 +18,14 @@ body {
 label {
     line-height: 1.9rem;
 }
+
+.form__Venta{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
 /* Table in form */
 .table__Productos{
     margin: 10px auto;
@@ -31,6 +46,11 @@ label {
 
 .tbody__row{
     border-bottom: 1px solid black;
+    text-align: center;
+}
+
+.BotonesDePago button{
+    
 }
 
 
@@ -38,8 +58,9 @@ label {
     width: 90%;
     height: 2rem;
     margin-top: 1em;
+    background-color: rgba(46, 109, 246, 0.562);
+    border: 0;
+    border-radius: 25px;
 }
 
-fieldset {
-    padding: 20px 40px;
-}
+
