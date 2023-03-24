@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
@@ -13,6 +13,7 @@
     <!-- Como no se si esto lo quieres agregar a la pagina principal , lo hare en un HTML aparte  :) -->
     <fieldset class="form__fieldset">
         <legend>Formulario de Venta</legend>
+        <!-- Tabla de Productos -->
         <table class="table__Productos">
             <legend class="table__legend">Nuestros Productos</legend>
             <thead>
@@ -24,7 +25,7 @@
             <tbody>
                 <tr class="tbody__row">
                     <th scope="row">Cazuela</th>
-                    <td>5000</td>
+                    <td id="precio__Cazuela">5000</td>
                 </tr>
                 <tr class="tbody__row">
                     <th scope="row">Pollo Con Arroz</th>
@@ -41,62 +42,65 @@
             </tbody>
         </table>
 
-
-        <form class="form__Venta" method="get">
+        <!-- Formulario de Venta -->
+        <form name="form" class="form__Venta" method="get">
             <div class="div__venta">
                 <label for="fecha">Fecha</label>
-                <input type="date" id="fecha">
+                <input type="date" name="date" id="fecha">
             </div>
             <div class="div__venta">
                 <label for="productos">Productos</label>
-                <select id="productos">
-                    <option value="cazuela">Cazuela</option>
-                    <option value="polloConArroz">Pollo con Arroz</option>
-                    <option value="garbanzos">Garbanzos</option>
-                    <option value="tequenos">Tequeños</option>
+                <select name="producto" id="producto">
+                    <option value="">Seleccione una Opcion</option>
+                    <option value="Cazuela">Cazuela</option>
+                    <option value="Pollo con arroz">Pollo con Arroz</option>
+                    <option value="Garbanzos">Garbanzos</option>
+                    <option value="Tequeños">Tequeños</option>
                 </select>
             </div>
             <div class="div__venta">
                 <label for="cantidad">Cantidad</label>
-                <input id="cantidad" type="number">
+                <input name="cantidad" value="cantidad" type="number" required>
             </div>
-            <input type="submit" value="enviar" class="submit-btn">        
-        <table>
+            <button type="submit" class="submit-btn">Enviar</button>
+        </form>
+
+        <!-- Tabla de Venta de productos -->
+        <table id="ventaDeProductos" class="ventaDeProductos">
             <thead>
-                <tr>
-                    <th></th>
-                    <th>Precio</th>
-                    <th>Cantidad</th>
-                    <th>Subtotal</th>
+                <tr class="thead__Encabezados">
+                    <th class="Enabezados__col" scope="col">Producto</th>
+                    <th class="Enabezados__col" scope="col">Cantidad</th>
+                    <th class="Enabezados__col" scope="col">Valor</th>
+                    <th class="Enabezados__col" scope="col">Subtotal</th>
                 </tr>
             </thead>
-            <tbody>
-                <tr>
-                    <th>Elemento a pedir</th>
-                    <td>valor</td>
-                    <td>cantidad</td>
-                    <td>subtotal</td>
-                </tr>
+            <tbody id="tbody__ventaProductos">
+                <!-- Nombre producto -->
+                <!-- Cantidad -->
+                <!-- Valor -->
+                <!-- Subtotal -->
             </tbody>
             <tfoot>
                 <tr>
                     <th>Valor Total</th>
                     <td></td>
                     <td></td>
-                    <td>Valor total</td>
+                    <td id="valorTotal"></td> <!-- Valor Total -->
                 </tr>
             </tfoot>
         </table>
         <div class="div__venta" id="metodoDePago">
             <label for="metodoDePago">Metodo de pago</label>
-            <br>
             <div class="BotonesDePago">
-                <button type="button" value="Efectivo"><img src="./assets/billete.png" width="30px"></button>
-                <button type="button" value="WebPay"><img src="./assets/webPay.png" width="30px"></button>
+                <button type="button" value="Efectivo"><img class="btn_pago" src="./assets/billete.png"
+                        width="30px"></button>
+                <button type="button" value="WebPay"><img class="btn_pago" src="./assets/webPay.png"
+                        width="30px"></button>
             </div>
+            <button type="button" id="btn__venta" class="btn__venta">Confirmar Venta</button>
         </div>
-        <button type="button" id="btn__venta" class="btn__venta" onclick="alert()">Confirmar Venta</button>
-    </form>
+       
     </fieldset>
     <script src="./main.js"></script>
 </body>
