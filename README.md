@@ -12,6 +12,16 @@ En la parte privada el usuario según el plan contratado podrá registrar las ve
 
 **Server:** por definir
 
+## Color Reference
+
+| Color             | Hex                                                                |
+| ----------------- | ------------------------------------------------------------------ |
+| Example Color | ![#0a192f](https://via.placeholder.com/10/0a192f?text=+) #0a192f |
+| Example Color | ![#3498DB](https://via.placeholder.com/10/3498DB?text=+) #3498DB |
+| Example Color | ![#EBEDEF](https://via.placeholder.com/10/EBEDEF?text=+) #EBEDEF |
+| Example Color | ![#F8F9F9](https://via.placeholder.com/10/F8F9F9?text=+) #F8F9F9 |
+
+
 
 ## Autores
 
