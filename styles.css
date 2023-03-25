@@ -1,0 +1,133 @@
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    font-family: cursive;
+    box-sizing: border-box;
+}
+
+/* Fieldset */
+
+.form__fieldset {
+    padding: 20px 40px;
+}
+
+/* Tabla Platos Precios */
+.table__Productos{
+    margin: 10px auto;
+    width: 80%;
+    border-collapse: collapse;
+}
+
+.table__legend{
+    text-align: center;
+    padding: 10px 0px;
+    border-bottom: 1px solid black;
+    font-weight: 900;
+}
+
+.tr__principal{
+    background-color: rgba(46, 109, 246, 0.562);
+    border-collapse: collapse;
+}
+
+.tbody__row{
+    border-bottom: 1px solid black;
+    text-align: center;
+    border-right: 1px solid black;
+    border-left: 1px solid black;
+}
+
+
+
+
+/* Form */
+label {
+    line-height: 1.9rem;
+}
+
+.form__Venta{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.submit-btn{
+    margin-top: 0.3em;
+    background-color: white;
+    border-radius: 25px;
+    background-color: rgba(46, 109, 246, 0.562);
+    border: 0;
+    padding: 8px 20px;
+    font-weight: bolder;
+    cursor: pointer;
+    margin: 10px 0px;
+}
+.submit-btn:hover{
+    scale: 1.04;
+}
+
+/* Seccion tabla valores  */
+.ventaDeProductos{
+    border-collapse: collapse;
+    outline: 1px double rgba(0, 0, 0, 0.265); 
+}
+
+.ventaDeProductos th{
+    background-color: rgba(46, 109, 246, 0.562);
+    padding: 5px 10px;
+}
+
+.ventaDeProductos td{
+    text-align: center;
+    padding: 2px 5px;
+}
+
+
+.ventaDeProductos td:nth-child(1){
+    border-top: 1px solid rgba(0, 0, 0, 0.265);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.265);
+    font-weight: bolder;
+    background-color: rgba(46, 109, 246, 0.562);
+}
+
+#valorTotal{
+   background-color: rgba(46, 109, 246, 0.562);
+   font-weight: bolder;
+}
+
+#valorTotal::before{
+    content: "$";
+}
+
+/* Seccion Pago */
+
+.BotonesDePago button{
+    cursor: pointer;
+}
+
+.div__venta{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.btn__venta {
+    width: 90%;
+    height: 2rem;
+    margin-top: 1.2em;
+    background-color: rgba(46, 109, 246, 0.562);
+    border: 0;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: bolder;
+}
+
+.btn__venta:hover{
+    scale: 1.03;
+}
+
