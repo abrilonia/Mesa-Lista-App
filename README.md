@@ -15,7 +15,7 @@ En la parte privada el usuario según el plan contratado podrá registrar las ve
 
 ## Autores
 
-- [@abrilonia](https://www.github.com/abrilonia) - Product Manager/Developer
+- [@abrilonia](https://www.github.com/abrilonia) - Product Manager/Product Owner/Developer
 
 
 - [@LucasA75](https://www.github.com/LucasA75) - Developer
