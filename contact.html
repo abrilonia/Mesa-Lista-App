@@ -22,7 +22,7 @@
             type="text"
             id="fullname"
             name="fullname"
-            placeholder="Ingrese su nombre completo"
+            placeholder="Nombre Apellido"
             required
           /><br />
           <label for="email">Correo electrónico:</label>
@@ -30,7 +30,7 @@
             type="email"
             id="email"
             name="email"
-            placeholder="Ingrese su dirección de correo electrónico"
+            placeholder="ejemplo@email.com"
             required
           /><br />
           <label for="phone">Número de teléfono:</label>
@@ -39,18 +39,18 @@
             pattern="[0-9]+"
             id="phone"
             name="phone"
-            placeholder="Ingrese su número de teléfono"
+            placeholder="9 2222 2222"
             required
           /><br />
           <label for="product">Producto en que está interesado:</label>
           <select id="product" name="product" required>
             <option value="">Seleccione un producto</option>
-            <option value="basic">Basic (solo registra ventas)</option>
+            <option value="basic">Basic - solo registra ventas</option>
             <option value="standard">
-              Estándar (Registra ventas y compras)
+              Estándar - Registra ventas y compras
             </option>
             <option value="full">
-              Full (Registra ventas, compras y genera reportes)
+              Full - Registra ventas, compras y genera reportes
             </option>
           </select>
           <br />
@@ -66,7 +66,10 @@
           </select>
           <div id="other_input"></div>
           <br />
-          <input type="submit" value="Enviar" id="submit_button" />
+          <button type="submit" value="Enviar" id="submit_button">
+            Enviar
+        </button>
+          <!-- <input type="submit" value="Enviar" id="submit_button" /> -->
         </form>
       </div>
     </main>

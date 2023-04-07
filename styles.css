@@ -3,8 +3,10 @@ body {
     align-items: center;
     justify-content: center;
     min-height: 100vh;
-    font-family: cursive;
+    font-family: Verdana, sans-serif;
     box-sizing: border-box;
+    background-color: black;
+    color: #acacac;
 }
 
 /* Fieldset */
@@ -23,20 +25,22 @@ body {
 .table__legend{
     text-align: center;
     padding: 10px 0px;
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid #db9334;
     font-weight: 900;
 }
 
 .tr__principal{
-    background-color: rgba(46, 109, 246, 0.562);
-    border-collapse: collapse;
+    background-color: #db9334;
+    border-collapse: collapse solid 1px #db9334;
+    color: black;
+    border: 1px solid #db9334;
+
 }
 
 .tbody__row{
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid r#db9334;
     text-align: center;
-    border-right: 1px solid black;
-    border-left: 1px solid black;
+    border: 0.5px solid #db9334;
 }
 
 
@@ -58,7 +62,7 @@ label {
     margin-top: 0.3em;
     background-color: white;
     border-radius: 25px;
-    background-color: rgba(46, 109, 246, 0.562);
+    background-color: #db9334;
     border: 0;
     padding: 8px 20px;
     font-weight: bolder;
@@ -72,12 +76,17 @@ label {
 /* Seccion tabla valores  */
 .ventaDeProductos{
     border-collapse: collapse;
-    outline: 1px double rgba(0, 0, 0, 0.265); 
+    outline: 1px double #db9334; 
 }
 
 .ventaDeProductos th{
-    background-color: rgba(46, 109, 246, 0.562);
+    background-color: r#db9334;
     padding: 5px 10px;
+   
+}
+
+.div__venta select, .div__venta input{
+    background-color: #acacac;
 }
 
 .ventaDeProductos td{
@@ -87,15 +96,17 @@ label {
 
 
 .ventaDeProductos td:nth-child(1){
-    border-top: 1px solid rgba(0, 0, 0, 0.265);
-    border-bottom: 1px solid rgba(0, 0, 0, 0.265);
+    border-top: 1px solid #db9334;
+    border-bottom: 1px solid #db9334;
     font-weight: bolder;
-    background-color: rgba(46, 109, 246, 0.562);
+    background-color: #db9334;
+    color: black;
 }
 
 #valorTotal{
-   background-color: rgba(46, 109, 246, 0.562);
+   background-color: #db9334;
    font-weight: bolder;
+   color: black;
 }
 
 #valorTotal::before{
@@ -120,7 +131,7 @@ label {
     width: 90%;
     height: 2rem;
     margin-top: 1.2em;
-    background-color: rgba(46, 109, 246, 0.562);
+    background-color: #db9334;
     border: 0;
     border-radius: 25px;
     cursor: pointer;

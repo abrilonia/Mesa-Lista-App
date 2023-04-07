@@ -4,8 +4,9 @@ body {
   background: linear-gradient(
     0deg,
     rgba(255, 255, 255, 1) 0%,
-    rgba(52, 152, 219, 1) 80%
+    rgb(0, 0, 0) 80%
   );
+  font-family: Verdana, sans-serif;
 }
 main > div {
   height: fit-content;
@@ -22,34 +23,46 @@ main > h2 {
   text-align: center;
   font-size: 30px;
   margin-bottom: 15vh;
-  color: #101010;
+  color: #ffffff;
 }
 
 #contact_form {
   margin-left: 5vw;
-  background-color: white;
+  color: white;
+  background-color: rgb(19, 19, 19);
   width: 30vw;
   display: flex;
   flex-direction: column;
-  padding: 40px;
-  border-radius: 20px;
-  box-shadow: 0px 0px 10px 0px #3498db;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px 0px #e4a86f;
 }
 
 #contact_form input,
 #contact_form select {
-  border-radius: 5px;
   height: 30px;
-  border: 1px solid #969696;
   margin-bottom: 10px;
   width: 100%;
+  padding: .5em;
+  border: none;
+  background: none;
+  outline: 0;
+  color: #ffffff;
+  border-bottom: 1px solid #db9334;
+}
+#contact_form select {
+  background-color: #db9334;
+  padding: 0.5em;
+  border-radius: 10px;
 }
 
 #submit_button {
   width: 100px !important;
   margin: 0 auto;
-  background-color: #3498db;
+  background-color: #db9334;
   color: #f8f9f9;
+  border-radius: 10px;
+  padding: .3em;
 }
 
 #submit_button:hover {
