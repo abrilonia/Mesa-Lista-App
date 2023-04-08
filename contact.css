@@ -3,7 +3,7 @@ body {
   margin: 0 0;
   background: linear-gradient(
     0deg,
-    rgba(255, 255, 255, 1) 0%,
+    #acacac 0%,
     rgb(0, 0, 0) 80%
   );
   font-family: Verdana, sans-serif;
@@ -18,22 +18,30 @@ main > div {
 #contact_img {
   width: 30vw;
 }
+section a {
+  text-decoration: none;
+  color: #acacac;
+}
+section a:hover{
+  color: #db9334;
+}
 
 main > h2 {
   text-align: center;
   font-size: 30px;
-  margin-bottom: 15vh;
-  color: #ffffff;
+  margin-bottom: 10vh;
+  color: #acacac;
+  text-shadow: 1px 1px white;
 }
 
 #contact_form {
   margin-left: 5vw;
-  color: white;
+  color: #acacac;
   background-color: rgb(19, 19, 19);
   width: 30vw;
   display: flex;
   flex-direction: column;
-  padding: 30px;
+  padding: 20px;
   border-radius: 10px;
   box-shadow: 0px 0px 10px 0px #e4a86f;
 }
@@ -47,7 +55,7 @@ main > h2 {
   border: none;
   background: none;
   outline: 0;
-  color: #ffffff;
+  color: #dfdfdf;
   border-bottom: 1px solid #db9334;
 }
 #contact_form select {
@@ -84,3 +92,4 @@ main > h2 {
     width: 70vw;
   }
 }
+
