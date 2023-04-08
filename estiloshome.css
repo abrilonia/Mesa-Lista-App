@@ -26,24 +26,35 @@ body{
     width: 100%;
     
 }
-#venta, #compra, #producto {
+section p {
+    padding: 30px 250px 0px 200px;
+    text-align: center;
+    color: white;
+    font-size: large;
+}
+.item_home {
     height: 150px;
     width: 200px;
-    background-color: rgba(247, 245, 245, 0.967);
+    background-color: rgb(27, 30, 30);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     border-radius: 10px;
-    border-color: rgb(7, 7, 7);
-    border: 2px solid;
+    border-color: rgb(27, 30, 30);
+    border: 1px solid whitesmoke;
     border-collapse: collapse;
-   
+    color: wheat;
+}
+.item_home:hover{
+    background-color: black;
+
 }
 main a{
     color: #000;
     font-family: Verdana, sans-serif;
     font-size: larger;
+    text-decoration: none;
 }
 main a:hover{
     color: #ee872d;
@@ -63,11 +74,12 @@ main a:hover{
     border-bottom: 1px solid hsla(0,0%,100%,0.1);
     padding-left: 5px;
     padding-right: 5px;
-    margin-top: 10px;
+    margin-top: 5px;
   }
   
   header nav h1 {
     text-shadow: 1px 1px #a9a9a977;
+    font-size: 40px;
   }
   header nav h1 span {
     text-shadow: 1px 1px #ee9e59;
@@ -82,9 +94,9 @@ main a:hover{
   
   .nav-link:hover {
     text-decoration:none;
-    color: #343a40;
+    color: #070707;
     background-color: #ee872d;
-    border-bottom: 2px solid #c3fae8;
+    
   }
   .nav-link.current {
     border-bottom: 2px solid #ffffff;
@@ -108,12 +120,24 @@ main a:hover{
         display: flex;
         flex-direction: column;
     }
+    section {        
+        display: none;
+    }
+    header nav h1 {
+        font-size: larger;
+    }
 }
 
 @media screen and (max-width: 834px) {
     .central {
         display: flex;
         flex-direction: column;
+    }
+    section {
+        display: none;
+    }
+    header nav h1 {
+        font-size: larger;
     }
 }
 
@@ -122,5 +146,6 @@ main a:hover{
         display: flex;
         flex-direction: column;
     }
+    body {background-color: black;
 }
     
