@@ -111,15 +111,15 @@ label {
     color: black;
 }
 
-#valorTotal{
+/* #valorTotal{
    background-color: #db9334;
    font-weight: bolder;
    color: black;
-}
+} */
 
-#valorTotal::before{
+/* #valorTotal::before{
     content: "$";
-}
+} */
 
 /* Seccion Pago */
 
