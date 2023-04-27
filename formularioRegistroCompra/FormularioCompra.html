@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./FormularioCompra.css">
+    <title>Formulario</title>
+</head>
+
+<body>
+    <header>
+        <a href="../index.html"><h2>Ir al home</h2></a>
+    </header>
+    <main>
+        <fieldset class="form__fieldset">
+            <legend>Formulario de Registro de Compra</legend>
+
+            <!-- Formulario de Venta -->
+            <form name="form" class="form__Venta" method="get">
+                <div class="div__venta">
+                    <label for="fecha">Fecha</label>
+                    <input type="date" name="date" id="fecha">
+                </div>
+                <div class="div__venta">
+                    <label for="fecha">Nombre Proveedor</label>
+                    <input type="text" name="name" id="name" required>
+                </div>
+                <div class="div__venta">
+                    <label for="productos">Productos</label>
+                    <select name="producto" id="producto">
+                        <option value="">Seleccione una Opcion</option>
+                        <option value="Leche">Leche</option>
+                        <option value="Harina">Harina</option>
+                        <option value="Huevo">Huevo</option>
+                        <option value="Papas">Papas</option>
+                    </select>
+                </div>
+                <div class="div__venta">
+                    <label for="cantidad">Cantidad</label>
+                    <input name="cantidad" value="cantidad" type="number" required>
+                </div>
+                <div class="div__venta">
+                    <label for="precio">Precio Unidad</label>
+                    <input name="precio" value="precio" type="number" required>
+                </div>
+                <button type="submit" class="submit-btn">Añadir</button>
+            </form>
+
+            <!-- Tabla de Venta de productos -->
+            <table id="ventaDeProductos" class="ventaDeProductos">
+                <thead>
+                    <tr class="thead__Encabezados">
+                        <th class="Enabezados__col" scope="col">Producto</th>
+                        <th class="Enabezados__col" scope="col">Cantidad</th>
+                        <th class="Enabezados__col" scope="col">Subtotal</th>
+                    </tr>
+                </thead>
+                <tbody id="tbody__ventaProductos">
+                    <!-- Nombre producto -->
+                    <!-- Cantidad -->
+                    <!-- Subtotal -->
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <th>Valor Total</th>
+                        <td></td>
+                        <td></td>
+                        <td id="valorTotal"></td> <!-- Valor Total -->
+                    </tr>
+                </tfoot>
+            </table>
+            <div class="div__venta" id="metodoDePago">
+                <button type="button" id="btn__venta" class="btn__venta">Confirmar Compra</button>
+            </div>
+           
+        </fieldset>
+
+    </main>
+    
+    <script src="./FormularioCompra.js"></script>
+</body>
+
+</html>
