@@ -3,7 +3,7 @@
     flex-direction: column;
     background-color: aquamarine;
     height: 100vh;
-    background-image: url(./assets/fondo-mesa-lista.png);
+    background-image: url(../assets/fondo-mesa-lista.png);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
