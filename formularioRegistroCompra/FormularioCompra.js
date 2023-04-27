@@ -2,7 +2,7 @@ const form = document.forms["form"];
 const TBvalores = document.getElementById("ventaDeProductos").getElementsByTagName("tbody")[0];
 const buttonSubmit = document.querySelector(".submit-btn")
 const totalValores = document.getElementById("valorTotal")
-
+const moneda = { style: 'currency', currency: 'CLP' }
 
 
 /* Funcionalidad botton submit */
@@ -16,10 +16,18 @@ buttonSubmit.onclick = function (e) {
     const precio = form.elements['precio'].value
     const subTotal = precio * cantidad
 
+    const precioDecimal = parseFloat(precio)
+    const precioConComa = precioDecimal.toLocaleString('es-CL', moneda)
+    parseInt(precioConComa)
 
-    console.log(nombreProveedor , precio)
+    const subTotalDecimal = parseFloat(subTotal)
+    const subTotalConComa =  subTotalDecimal.toLocaleString('es-CL', moneda)
+    parseInt(subTotalConComa)
 
-    if(producto === ""){
+    console.log(subTotalConComa)
+    console.log(nombreProveedor, precio)
+
+    if (producto === "") {
         alert("Escoje un producto")
         window.location.reload() // No es lo mejor pero es lo que se me ocurre :(
     }
@@ -42,11 +50,11 @@ buttonSubmit.onclick = function (e) {
         celdaCantidad.innerHTML = cantidad
 
         const celdaPrecio = filaExistente.cells[2];
-        celdaPrecio.innerHTML = precio
+        celdaPrecio.innerHTML = precioConComa
 
         const celdaSubTotal = filaExistente.cells[3];
-        celdaSubTotal.innerHTML = subTotal
-        
+        celdaSubTotal.innerHTML = subTotalConComa
+
     }
     else {
         //si no existe la fila, crear una nueva
@@ -59,10 +67,10 @@ buttonSubmit.onclick = function (e) {
         celdaCantidad.innerHTML = cantidad
 
         const celdaPrecio = fila.insertCell();
-        celdaPrecio.innerHTML = precio
+        celdaPrecio.innerHTML = precioConComa
 
         const celdaSubTotal = fila.insertCell();
-        celdaSubTotal.innerHTML = subTotal
+        celdaSubTotal.innerHTML = subTotalConComa
     }
 
     actualizarTotal()
@@ -72,12 +80,18 @@ buttonSubmit.onclick = function (e) {
 
 function actualizarTotal() {
     let sumaPrecios = 0;
-    
+
     for (let i = 0; i < TBvalores.rows.length; i++) {
-      const celdaPrecio = TBvalores.rows[i].cells[3];
-      const precio = parseFloat(celdaPrecio.innerHTML);
-      sumaPrecios += precio;
+        const celdaPrecio = TBvalores.rows[i].cells[3];
+        const precio = celdaPrecio.innerHTML
+        /* Convertir esto denuevo a int y despues sumar y despues volver a mostrar */
+        const numeroSinSeparador = precio.replace(/[^\d]/g, '');
+        const numeroEntero = parseInt(numeroSinSeparador) /* Esto quita todos los caracteres no numericos */
+        sumaPrecios += numeroEntero;
     }
     
-    totalValores.innerHTML = sumaPrecios;
-  }
+    const sumaPrecioDecimal = parseFloat(sumaPrecios)
+    console.log(sumaPrecioDecimal)
+    const precioMoneda = sumaPrecioDecimal.toLocaleString('es-CL', moneda)
+    totalValores.innerHTML = precioMoneda;
+}
